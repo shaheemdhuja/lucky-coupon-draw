@@ -89,7 +89,7 @@ export function LiveDraw({ onExitLive }: LiveDrawProps) {
     state.revealedCount >= state.winners.length;
 
   return (
-    <div className="live-draw">
+    <div className={`live-draw${showFinal ? ' is-complete' : ''}`}>
       <Particles />
       {state.status === 'complete' && <Confetti />}
 
