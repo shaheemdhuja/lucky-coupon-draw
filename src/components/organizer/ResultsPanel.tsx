@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useDraw } from '../../context/DrawContext';
 import { formatNumber, exportCSV, exportTXT, downloadFile } from '../../utils/storage';
+import { getGridColumns } from '../../utils/format';
 
 export function VerifyCoupon() {
   const { state } = useDraw();
@@ -103,7 +104,7 @@ export function WinnerHistory() {
 
   if (state.winners.length === 0) return null;
 
-  const columns = state.winnerCount <= 20 ? 5 : state.winnerCount <= 50 ? 5 : 10;
+  const columns = getGridColumns(state.winners.length);
 
   return (
     <div className="history-section">

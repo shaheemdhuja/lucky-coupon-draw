@@ -2,9 +2,6 @@ export { formatNumber } from './storage';
 
 export function getGridColumns(count: number): number {
   if (count <= 10) return count;
-  if (count <= 20) return 5;
-  if (count <= 50) return 5;
-  if (count <= 100) return 10;
   return 10;
 }
 

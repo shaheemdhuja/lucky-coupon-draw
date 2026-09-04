@@ -3,15 +3,11 @@ import { formatNumber } from '../../utils/storage';
 import { getGridColumns } from '../../utils/format';
 
 interface FinalResultsProps {
-  eventTitle: string;
-  subtitle: string;
   winners: number[];
   maxNumber: number;
 }
 
 export function FinalResults({
-  eventTitle,
-  subtitle,
   winners,
   maxNumber,
 }: FinalResultsProps) {
@@ -35,11 +31,6 @@ export function FinalResults({
           {winners.length} WINNING COUPON NUMBERS HAVE BEEN SELECTED
         </p>
       </motion.div>
-
-      <div className="final-header">
-        <h1 className="final-event-title">{eventTitle}</h1>
-        <p className="final-subtitle">{subtitle}</p>
-      </div>
 
       <motion.div
         className="final-grid"

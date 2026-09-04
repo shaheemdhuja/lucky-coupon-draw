@@ -179,8 +179,6 @@ export function LiveDraw({ onExitLive }: LiveDrawProps) {
               animate={{ opacity: 1 }}
             >
               <FinalResults
-                eventTitle={state.eventTitle}
-                subtitle={state.subtitle}
                 winners={state.winners}
                 maxNumber={state.endNumber}
               />
